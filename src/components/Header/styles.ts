@@ -1,7 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-    background: var(--blue);
+    ${props => props.theme === true ? 'background: var(--pink)' : 'background: var(--blue)'}
+`;
+
+export const SwitchContainer = styled.div`
+    max-width: 1120px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+        font-weight: 500;
+        color: var(--shape);
+    }
 `;
 
 export const Content = styled.div`
@@ -15,8 +29,7 @@ export const Content = styled.div`
 
     button { 
         font-size: 1rem;
-        color: var(--shape);
-        background: var(--blue-light);
+        ${props => props.theme === true ? 'color: var(--shape); background: var(--pink-light);' : 'color: var(--shape); background: var(--blue-light);'}
         border: 0;
         padding: 0 2rem;
         border-radius: 0.25rem;

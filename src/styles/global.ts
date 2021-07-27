@@ -5,8 +5,15 @@ export const GlobalStyle = createGlobalStyle`
         --background: #f0f2f5;
         --red: #e52e4d;
         --green: #33cc95;
+
+        // Yuri Theme
         --blue: #5429cc;
         --blue-light: #6933ff;
+
+        // Bia Theme
+        --pink: #ad1457;
+        --pink-light: #d81b60;
+
         --text-title: #363f5f;
         --text-body: #969cb3;
         --shape: #ffffff;
