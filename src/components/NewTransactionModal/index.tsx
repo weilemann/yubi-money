@@ -17,7 +17,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
     const [value, setValue] = useState<number>(0)
     const [category, setCategory ] = useState<string>('')
 
-    function handleCreateNewTransaction(event: FormEvent) {
+    async function handleCreateNewTransaction(event: FormEvent) {
         event.preventDefault();
 
         const data = {
@@ -27,7 +27,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
             transactionType,
         };
 
-        api.post('/transactions', data)
+        await api.post('/transactions', data);
     }
 
     return (
