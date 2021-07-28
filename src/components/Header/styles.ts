@@ -1,12 +1,17 @@
 import styled from 'styled-components';
+import biaBackgroundImg from '../../assets/backgrounds/biaBackground.png'
 
 export const Container = styled.header`
-    ${props => props.theme === true ? 'background: var(--pink)' : 'background: var(--blue)'}
+    // Hearts Background
+    /* ${props => props.theme === true ? `background: var(--pink) url(${biaBackgroundImg}) center` : `background: var(--blue)`} */
+
+    ${props => props.theme === true ? `background: var(--pink)` : `background: var(--blue)`}
 `;
 
 export const SwitchContainer = styled.div`
     max-width: 1120px;
     margin: 0 auto;
+    padding: 1rem;
 
     display: flex;
     justify-content: flex-end;
