@@ -55,6 +55,16 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
     [disabled] {
         opacity: 0.6;
         cursor: not-allowed;
