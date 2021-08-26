@@ -5,12 +5,16 @@ type PropsThemeContext = {
     setOnOff: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+type ThemeProviderProps = {
+  children: JSX.Element[],
+}
+
 export const ThemeContext = createContext<PropsThemeContext>({
     onOff: false,
     setOnOff: () => {},
 });
 
-export function ThemeProvider({ children }: any) {
+export function ThemeProvider({ children }: ThemeProviderProps) {
   const [onOff, setOnOff] = useState<boolean>(false)
 
   return (

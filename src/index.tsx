@@ -27,6 +27,14 @@ createServer({
           amount: 1100,
           createdAt: new Date('2021-02-14 11:00:00')
         },
+        {
+          id: 3,
+          title: 'Compras do mês',
+          type: 'withdraw',
+          category: 'Casa',
+          amount: 600,
+          createdAt: new Date('2021-02-21 08:00:00')
+        },
       ],
     })
   },
